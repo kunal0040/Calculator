@@ -6,6 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (display.value === "Error") {
       display.value = "";
     }
+    if (value === ".") {
+      const currentNumber = display.value.split(/[+\-x÷*/%]/).pop();
+      if (currentNumber.includes(".")) return;
+    }
     if (value === "x" || value === "X" || value === "*") {
       display.value += "x";
     } else if (value === "/") {
